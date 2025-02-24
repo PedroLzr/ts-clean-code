@@ -1,12 +1,31 @@
 # Guía de Código Limpio en TypeScript
 
-Este documento proporciona una base sólida para escribir código de calidad en TypeScript. Es una referencia que puedes usar en tus proyectos y también está abierta a la colaboración de la comunidad.
+Este documento establece una base para escribir código de calidad en TypeScript. Sirve como una referencia que puedes aplicar en tus proyectos para garantizar un código limpio, legible y consistente entre todos los desarrolladores. Al promover buenas prácticas y uniformidad en el formato del código, busca facilitar la colaboración y mejorar el mantenimiento a largo plazo. Este documento está abierto a la contribución de la comunidad.
 
-## 📏 Longitud de línea
+## 🏷️ Convenciones de Nomenclatura
+
+### 🔡 Variables y Propiedades
+- Usa `lowerCamelCase` para variables y propiedades.
+
+### 🏛️ Tipos, Interfaces y Clases
+- Emplea `PascalCase` para clases, interfaces y tipos.
+
+### 🚩 Enums
+- Nombres de enums en `PascalCase` y sus valores en `UPPER_SNAKE_CASE`.
+
+### 📁 Archivos
+- Nombres de archivo en `lowercase-kebab-case`.
+
+### 🔒 Modificadores de Acceso
+- Usa `private`, `protected` y `public` para la visibilidad de los miembros de clase.
+
+## Reglas de Formato
+
+### 📏 Longitud de línea
 
 Limita las líneas de código a un máximo de **80 caracteres** para mejorar la legibilidad.
 
-## 🔚 Uso de punto y coma
+### 🔚 Uso de punto y coma
 
 Siempre utiliza punto y coma (`;`) para finalizar las instrucciones.
 
@@ -18,7 +37,7 @@ let x = 1;
 let x = 1
 ```
 
-## 💬 Comillas
+### 💬 Comillas
 
 Usa comillas dobles (`"`) para las cadenas de texto.
 
@@ -30,7 +49,7 @@ let foo = "bar";
 let foo = 'bar';
 ```
 
-## 🔗 Llaves
+### 🔗 Llaves
 
 Las llaves de apertura deben ir en la misma línea que la declaración.
 
@@ -58,7 +77,7 @@ if (i % 2 === 0) {
 }
 ```
 
-## 📌 Declaración de variables
+### 📌 Declaración de variables
 
 Prefiere `let` en lugar de `var` y usa `const` siempre que sea posible.
 
@@ -71,37 +90,7 @@ for (let i = 0; i < items.length; i++) {
 }
 ```
 
-## 🏷️ Nombres de variables y propiedades
-
-- Usa `camelCase` para variables y propiedades.
-- Evita abreviaturas poco comunes.
-
-```typescript
-// Correcto
-let adminUser = db.query("SELECT * FROM users ...");
-```
-
-## 🔠 Nombres de tipos
-
-Utiliza `PascalCase` (camel case en mayúsculas) para nombres de clases y tipos.
-
-```typescript
-// Correcto
-class UserAccount {
-  private field = "a";
-}
-```
-
-## 🔒 Constantes
-
-Las constantes deben declararse en mayúsculas, separadas por guiones bajos:
-
-```typescript
-// Correcto
-const TIMEOUT_SECONDS = 60;
-```
-
-## 🏗️ Creación de objetos y arrays
+### 🏗️ Creación de objetos y arrays
 
 - Usa comas finales.
 - Mantén las declaraciones cortas en una sola línea.
@@ -115,7 +104,7 @@ const objeto = {
 };
 ```
 
-## ⚖️ Operadores de igualdad
+### ⚖️ Operadores de igualdad
 
 Utiliza operadores de comparación estricta (`===` o `!==`).
 
@@ -126,7 +115,7 @@ if (a === "") {
 }
 ```
 
-## 🚩 Uso de llaves en condiciones
+### 🚩 Uso de llaves en condiciones
 
 Siempre usa llaves, incluso para una sola instrucción:
 
@@ -137,7 +126,7 @@ if (a) {
 }
 ```
 
-## 🔍 Comparaciones booleanas
+### 🔍 Comparaciones booleanas
 
 Evita comparar directamente con `true` o `false`.
 
@@ -148,7 +137,7 @@ if (isValid) {
 }
 ```
 
-## 🔄 Condiciones Yoda
+### 🔄 Condiciones Yoda
 
 Evita las condiciones Yoda:
 
@@ -159,11 +148,11 @@ if (valor >= 0) {
 }
 ```
 
-## 🧑‍💻 Longitud de funciones
+### 🧑‍💻 Longitud de funciones
 
 Las funciones deben ser concisas. Trata de que ocupen menos de la mitad de la altura de la pantalla.
 
-## 🔁 Retornos anticipados
+### 🔁 Retornos anticipados
 
 Evita la anidación profunda retornando tan pronto como sea posible:
 
@@ -177,7 +166,7 @@ function validar(valor: number) {
 }
 ```
 
-## 🔥 Funciones de flecha
+### 🔥 Funciones de flecha
 
 Prefiere las funciones de flecha por su manejo más claro de `this`.
 
@@ -188,7 +177,7 @@ req.on("end", () => {
 });
 ```
 
-## 📁 Convención para nombres de archivo
+### 📁 Convención para nombres de archivo
 
 - Usa minúsculas.
 - Separa las palabras con guiones (`-`).
@@ -198,7 +187,7 @@ req.on("end", () => {
 mi-archivo.ts
 ```
 
-## 🔐 Variables y métodos privados
+### 🔐 Variables y métodos privados
 
 Prefija con guion bajo (`_`) los métodos o variables privadas:
 
@@ -212,7 +201,7 @@ class Ejemplo {
 }
 ```
 
-## 🔧 Parámetros opcionales en TypeScript
+### 🔧 Parámetros opcionales en TypeScript
 
 Evita los parámetros opcionales en archivos de implementación:
 
@@ -221,11 +210,61 @@ Evita los parámetros opcionales en archivos de implementación:
 export declare function concatenar(...cadenas: string[]): string;
 ```
 
-## 🚀 Contribuciones
+---
 
-Este documento está abierto a contribuciones. Si deseas mejorar o sugerir cambios, realiza un *fork* y envía un *pull request*.
+## 💡 Mejores Prácticas
+
+- ✅ Evita comentarios innecesarios: El código debe ser **autoexplicativo**.
+- ✅ Tipa explícitamente variables y funciones en TypeScript.
+- ✅ Usa funciones puras siempre que sea posible.
+- ✅ Evita abreviaciones innecesarias para mejorar la legibilidad.
+- ✅ Documenta con JSDoc las funciones y clases públicas:
+
+```typescript
+/**
+ * Calcula la suma de dos números.
+ * @param a Primer número
+ * @param b Segundo número
+ * @returns Suma de a y b
+ */
+function sum(a: number, b: number): number {
+  return a + b;
+}
+```
 
 ---
 
-**¡Mantén tu código limpio y mantenible!** ✨
+## 🤝 Cómo Contribuir
 
+¡Las contribuciones son bienvenidas! 🙌
+
+1. Haz un **fork** de este repositorio.
+2. Crea una nueva rama con tu propuesta:
+   ```
+   git checkout -b feature/tu-mejora
+   ```
+3. Realiza tus cambios siguiendo las convenciones establecidas.
+4. Haz un **commit** con un mensaje claro:
+   ```
+   git commit -m "Añade nueva práctica de código limpio"
+   ```
+5. Envía un **pull request** explicando tu cambio.
+
+### 📋 Reglas para Contribuciones
+- Sigue las reglas de formato y estilo de este documento.
+- Asegúrate de que tu código pase las validaciones de ESLint y Prettier.
+- Aporta ejemplos claros y concisos.
+
+---
+
+## 📜 Licencia
+
+Este proyecto está bajo la [Licencia MIT](LICENSE).
+
+---
+
+## 🚀 Créditos
+
+Esta guía ha sido desarrollada por la comunidad y está abierta a futuras mejoras. Siéntete libre de proponer cambios, abrir issues o simplemente dar ⭐️ al proyecto si te resulta útil.
+
+---
