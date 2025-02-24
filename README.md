@@ -1,7 +1,5 @@
 # Guía de Código Limpio en TypeScript
 
-> **Una referencia completa para escribir código limpio y mantenible en TypeScript**
-
 Este documento proporciona una base sólida para escribir código de calidad en TypeScript. Es una referencia que puedes usar en tus proyectos y también está abierta a la colaboración de la comunidad.
 
 ## 📏 Longitud de línea
