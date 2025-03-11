@@ -265,6 +265,6 @@ Este proyecto está bajo la [Licencia MIT](LICENSE).
 
 ## 🚀 Créditos
 
-Esta guía ha sido desarrollada por la comunidad y está abierta a futuras mejoras. Siéntete libre de proponer cambios, abrir issues o simplemente dar ⭐️ al proyecto si te resulta útil.
+Esta guía ha sido desarrollada para la comunidad y está abierta a futuras mejoras. Siéntete libre de proponer cambios, abrir issues o simplemente dar ⭐️ al proyecto si te resulta útil.
 
 ---
