@@ -16,9 +16,6 @@ Este documento establece una base para escribir código de calidad en TypeScript
 ### 📁 Archivos
 - Nombres de archivo en `lowercase-kebab-case`.
 
-### 🔒 Modificadores de Acceso
-- Usa `private`, `protected` y `public` para la visibilidad de los miembros de clase.
-
 ## Reglas de Formato
 
 ### 📏 Longitud de línea
@@ -124,6 +121,10 @@ Siempre usa llaves, incluso para una sola instrucción:
 if (a) {
   return "correcto";
 }
+
+// Incorrecto
+if (a)
+  return "incorrecto";
 ```
 
 ### 🔍 Comparaciones booleanas
@@ -145,6 +146,11 @@ Evita las condiciones Yoda:
 // Correcto
 if (valor >= 0) {
   console.log("correcto");
+}
+
+// Incorrecto
+if (0 <= valor) {
+  console.log("incorrecto");
 }
 ```
 
@@ -177,19 +183,9 @@ req.on("end", () => {
 });
 ```
 
-### 📁 Convención para nombres de archivo
-
-- Usa minúsculas.
-- Separa las palabras con guiones (`-`).
-
-```typescript
-// Correcto
-mi-archivo.ts
-```
-
 ### 🔐 Variables y métodos privados
 
-Prefija con guion bajo (`_`) los métodos o variables privadas:
+Prefija con guion bajo (`_`) los métodos o variables privadas (A discutir):
 
 ```typescript
 class Ejemplo {
@@ -215,9 +211,10 @@ export declare function concatenar(...cadenas: string[]): string;
 ## 💡 Mejores Prácticas
 
 - ✅ Evita comentarios innecesarios: El código debe ser **autoexplicativo**.
-- ✅ Tipa explícitamente variables y funciones en TypeScript.
+- ✅ Tipa explícitamente variables y funciones en TypeScript. **Importante**
 - ✅ Usa funciones puras siempre que sea posible.
 - ✅ Evita abreviaciones innecesarias para mejorar la legibilidad.
+- ✅ Usa `private`, `protected` y `public` para la visibilidad de los miembros de clase.
 - ✅ Documenta con JSDoc las funciones y clases públicas:
 
 ```typescript
@@ -266,5 +263,3 @@ Este proyecto está bajo la [Licencia MIT](LICENSE).
 ## 🚀 Créditos
 
 Esta guía ha sido desarrollada para la comunidad y está abierta a futuras mejoras. Siéntete libre de proponer cambios, abrir issues o simplemente dar ⭐️ al proyecto si te resulta útil.
-
----
