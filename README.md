@@ -2,7 +2,7 @@
 
 Este documento establece una base para escribir código de calidad en TypeScript. Sirve como una referencia que puedes aplicar en tus proyectos para garantizar un código limpio, legible y consistente entre todos los desarrolladores. Al promover buenas prácticas y uniformidad en el formato del código, busca facilitar la colaboración y mejorar el mantenimiento a largo plazo. Este documento está abierto a la contribución de la comunidad.
 
-## 🏷️ Convenciones de Nomenclatura
+## Convenciones de Nomenclatura
 
 ### 🔡 Variables y Propiedades
 - Usa `lowerCamelCase` para variables y propiedades.
@@ -208,7 +208,7 @@ export declare function concatenar(...cadenas: string[]): string;
 
 ---
 
-## 💡 Mejores Prácticas
+## Buenas Prácticas
 
 - ✅ Evita comentarios innecesarios: El código debe ser **autoexplicativo**.
 - ✅ Tipa explícitamente variables y funciones en TypeScript. **Importante**
@@ -231,7 +231,7 @@ function sum(a: number, b: number): number {
 
 ---
 
-## 🤝 Cómo Contribuir
+## Cómo Contribuir
 
 ¡Las contribuciones son bienvenidas! 🙌
 
@@ -254,12 +254,6 @@ function sum(a: number, b: number): number {
 
 ---
 
-## 📜 Licencia
+## Licencia
 
 Este proyecto está bajo la [Licencia MIT](LICENSE).
-
----
-
-## 🚀 Créditos
-
-Esta guía ha sido desarrollada para la comunidad y está abierta a futuras mejoras. Siéntete libre de proponer cambios, abrir issues o simplemente dar ⭐️ al proyecto si te resulta útil.
